@@ -1,0 +1,27 @@
+
+.contact-form{
+    background: #fff;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-info{
+    text-align: center;
+    
+}
+
+
+#receta{
+    background: #fff;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 70%;
+    
+
+}
