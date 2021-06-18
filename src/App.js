@@ -353,6 +353,23 @@ updateUser = (e)=>{
 }  
 
 
+deleteAccount= () => {
+        
+       
+  fetch(`/api/account/delete/${sessionStorage.getItem('user_name')}`, {
+      method: 'DELETE'
+  })
+  .then(res => res.json())
+  .then(data => {
+    this.LogOut()
+
+    
+      
+      
+  })
+}
+
+
 
 
 
@@ -413,7 +430,7 @@ updateUser = (e)=>{
                       <Favourites />
                       </Route>
                       <Route exact path='/profile' >
-                      <Profile onUpdateUser={this.updateUser} uploadImageProfile={this.uploadImageProfile} redirect={this.state.redirect}/>
+                      <Profile onDeleteAccount={this.deleteAccount} onUpdateUser={this.updateUser} uploadImageProfile={this.uploadImageProfile} redirect={this.state.redirect}/>
                       
 
                       </Route>

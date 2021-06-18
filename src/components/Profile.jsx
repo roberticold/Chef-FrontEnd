@@ -1,9 +1,50 @@
 import React, { Component } from 'react'
 import {ToastContainer, toast } from 'react-toastify';
 import { Redirect } from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 export default class Profile extends Component {
+    constructor(){
+        super();
+
+        this.state = {
+            info: {},
+            
+            
+        }
+    }
+
+    componentDidMount(){
+        
+        
+        fetch(`/api/getprofile/${sessionStorage.getItem('user_name')}`
+
+
+
+        )
+            .then(res => res.json())
+            .then(data => {
+                
+                
+                console.log(data)
+                
+                this.setState({
+                    
+                    info: data,
+
+                   
+                })
+
+            }).catch((error) => {
+                console.error(error);
+                
+            })
+    }
+
+
     
+    
+
 
     
 
@@ -15,6 +56,7 @@ export default class Profile extends Component {
 
            
         }
+        
         return (
             <div className="container-fluid ">
                 <div className="row justify-content-center mt-3">
@@ -35,19 +77,19 @@ export default class Profile extends Component {
                         <form onSubmit ={(e)=>this.props.onUpdateUser(e)}  className="form-detail" action="#" method="post" id="myform">
                             <div className="form-row">
                                 <label for="username">NEW USERNAME</label>
-                                <input type="text" name="username" id="username" className="input-text"></input>
+                                <input defaultValue={this.state.info.username }type="text" name="username" id="username" className="input-text"></input>
                             </div>
                             <div className="form-row">
                                 <label for="your_email">NEW E-MAIL</label>
-                                <input type="text" name="your_email" id="your_email" className="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"></input>
+                                <input defaultValue={this.state.info.email } type="text" name="your_email" id="your_email" className="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"></input>
                             </div>
                             <div className="form-row">
                                 <label for="password">NEW PASSWORD</label>
-                                <input type="password" name="password" id="password" className="input-text" required></input>
+                                <input defaultValue={this.state.info.password } type="password" name="password" id="password" className="input-text" required></input>
                             </div>
                             <div className="form-row">
                                 <label for="comfirm_password">CONFIRM NEW PASSWORD</label>
-                                <input type="password" name="comfirm_password" id="comfirm_password" className="input-text" required></input>
+                                <input defaultValue={this.state.info.password } type="password" name="comfirm_password" id="comfirm_password" className="input-text" required></input>
                             </div>
                             <div className="form-row-last">
                                 <input type="submit" name="register" className="register" value="Update"></input>
@@ -66,13 +108,9 @@ export default class Profile extends Component {
                 <div className="page-content">
                     <div className="form-v7-content">
                         
-                        <form onSubmit ={(e)=>this.props.onUpdateUser(e)}  className="form-detail" action="#" method="post" id="myform">
-                        <label for="comfirm_password">Delete Account</label>
-                            <div className="form-row-last">
-                                <input type="submit" name="register" className="register" value="Delete"></input>
-                               
-                            </div>
-                        </form>
+                      
+                           
+                            <Link to={'/'}><a onClick={this.props.onDeleteAccount} className="btn btn-danger" >DELETE ACCOUNT</a></Link>
                     </div>
                     
 

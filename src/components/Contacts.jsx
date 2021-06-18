@@ -56,6 +56,24 @@ export default class Contacts extends Component {
             })
     }
 
+    deleteContact= (id) => {
+        
+       
+        fetch(`/api/contact/delete/${id}/${sessionStorage.getItem('user_name')}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            this.setState({
+                    
+                contacts: data,
+
+               
+            })
+        })
+    }
+
 
     render() {
         return (
@@ -75,7 +93,7 @@ export default class Contacts extends Component {
                             </div>
                             
                             <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xxs-10">
-                            <h5>{comment.username}</h5> <Link to={`/ChefsRecipes/${comment.id}`}><a className="btn btn-outline" ><i class="far fa-file"></i></a></Link>  <a className="btn btn-outline" key={comment.id} onClick={() => this.deleteComment(comment.id)} data-bs-dismiss="modal"><i class="fab fa-facebook-messenger"></i></a><a className="btn btn-outline" key={comment.id} onClick={() => this.deleteComment(comment.id)} data-bs-dismiss="modal"><i class="far fa-trash-alt"></i></a>
+                            <h5>{comment.username}</h5> <Link to={`/ChefsRecipes/${comment.id}`}><a className="btn btn-outline" ><i class="far fa-file"></i></a></Link>  <a className="btn btn-outline" key={comment.id} onClick={() => this.deleteComment(comment.id)} data-bs-dismiss="modal"><i class="fab fa-facebook-messenger"></i></a><a className="btn btn-outline" key={comment.id} onClick={() => this.deleteContact(comment.id)} data-bs-dismiss="modal"><i class="far fa-trash-alt"></i></a>
                              
                              
                              <hr class="style10"></hr>
