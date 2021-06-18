@@ -48,7 +48,7 @@ export default class Allrecipes extends Component {
             <div className="card shadow-sm" id="radius">
               <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src={recipe.photo} className="img-fluid" />
-                <a href="#">
+                <a href="##">
                  
                 </a>
               </div>
