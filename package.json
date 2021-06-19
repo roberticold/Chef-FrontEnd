@@ -29,7 +29,6 @@
     ]
   },
   "proxy": "https://chef-r.herokuapp.com",
-  "homepage": "https://chef-r.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",
