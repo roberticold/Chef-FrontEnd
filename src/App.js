@@ -157,7 +157,7 @@ loginUser = (e)=>{
   
   
   
-  fetch('https://chef-r.herokuapp.com/api/login',{
+  fetch('http://cors-anywhere.herokuapp.com/https://chef-r.herokuapp.com/api/login',{
       method: "POST",
       headers: {
           
