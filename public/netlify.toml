@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://chef-chef.netlify.app/api/login"
+  to = "https://chef-r.herokuapp.com/api/login"
+  status = 200
