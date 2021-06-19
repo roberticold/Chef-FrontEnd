@@ -59,7 +59,7 @@ export default class App extends Component {
     let password_confirmed = e.target.comfirm_password.value;
 
     if(password==password_confirmed){
-      fetch('https://chef-r.herokuapp.com/api/users',{
+      fetch('/api/users',{
         method: "POST",
         headers: {
             
@@ -157,7 +157,7 @@ loginUser = (e)=>{
   
   
   
-  fetch('https://chef-r.herokuapp.com/api/login',{
+  fetch('/api/login',{
       method: "POST",
       headers: {
           
