@@ -7,15 +7,15 @@ export default class LeftPanel extends Component {
         return (
 
           
-          <div class="wrapper">
+          <div className="wrapper">
     
     <nav id="sidebar">
         
-        <div class="sidebar-header">
+        <div className="sidebar-header">
             <h3>Main Menu</h3>
         </div>
 
-        <ul class="list-unstyled components">
+        <ul className="list-unstyled components">
             
             <li>
                 <a href="/favourites">Favourites</a>

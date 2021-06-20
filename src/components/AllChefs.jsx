@@ -104,7 +104,7 @@ export default class AllChefs extends Component {
                             <h5>{comment.username}</h5> <Link to={`/ChefsRecipes/${comment.id}`}><a className="btn btn-outline" ><i class="far fa-file"></i></a></Link> <a className="btn btn-outline" key={comment.id} onClick={() => this.AddToContacts(comment.id)} data-bs-dismiss="modal"><i class="far fa-address-book"></i></a> <a className="btn btn-outline" key={comment.id} onClick={() => this.deleteComment(comment.id)} data-bs-dismiss="modal"><i class="fab fa-facebook-messenger"></i></a>
                             
                              
-                             <hr class="style10"></hr>
+                             <hr className="style10"></hr>
     
                           
                             </div>
