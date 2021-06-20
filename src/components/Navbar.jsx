@@ -17,7 +17,7 @@ export default class Navbar extends Component {
                
                 
                 <nav className="navbar shadow-sm sticky-top navbar-expand-md navbar-light" style={{"background-color":"white"}}>  
-                    <div className='container-fluid'>
+                    
                     
                             <div >
                                 <a className="navbar-brand h1 mb-0" href="/" >
@@ -97,7 +97,7 @@ export default class Navbar extends Component {
                                                               
                            
                            
-                    </div>
+                    
                 </nav>  
 
                    
