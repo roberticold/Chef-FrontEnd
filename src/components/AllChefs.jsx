@@ -87,8 +87,8 @@ export default class AllChefs extends Component {
         return (
 
           
-            <div className="row justify-content-center m-2">
-            <div className="col col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 col-xxs-8">
+            <div className="row justify-content-center m-3">
+            <div className="col-xxl-6 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div className="card shadow-sm ">
                         <h5>All Chefs</h5>
                        
