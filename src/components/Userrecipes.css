@@ -34,7 +34,7 @@
     position: relative;
     box-shadow: 0 0 5px rgba(75, 75, 75, .07);
     z-index: 1;
-    border-radius: 2%;
+    border-radius: 10px;
   }
   
 
