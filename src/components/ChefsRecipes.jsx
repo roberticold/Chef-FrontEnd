@@ -14,7 +14,7 @@ export default class ChefsRecipes extends Component {
 
     componentDidMount(){
         let user_id = this.props.match.params.id
-        fetch(`/api/recipie/${user_id}`)
+        fetch(`https://chef-r.herokuapp.com/api/recipie/${user_id}`)
       .then(res => res.json())
       .then(data => {
           console.log(data)

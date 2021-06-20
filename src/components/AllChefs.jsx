@@ -17,7 +17,7 @@ export default class AllChefs extends Component {
     componentDidMount(){
         
         
-        fetch('/api/allusers')
+        fetch('https://chef-r.herokuapp.com/api/allusers')
             .then(res => res.json())
             .then(data => {
                 
@@ -41,7 +41,7 @@ export default class AllChefs extends Component {
 
     AddToContacts=(id)=>{
 
-        fetch(`/api/addcontacts/${id}`,{
+        fetch(`https://chef-r.herokuapp.com/api/addcontacts/${id}`,{
             method: "POST",
             headers: {
                 

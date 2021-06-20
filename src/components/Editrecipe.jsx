@@ -20,7 +20,7 @@ export default class Editrecipe extends Component {
     componentDidMount(){
         let recipeId = this.props.match.params.id;
         console.log(recipeId)
-        fetch(`/api/recipe/${recipeId}`)
+        fetch(`https://chef-r.herokuapp.com/api/recipe/${recipeId}`)
             .then(res => res.json())
             .then(data => {
                 
@@ -47,7 +47,7 @@ export default class Editrecipe extends Component {
     deleteRecipe = () => {
         
        
-        fetch(`/api/recipe/delete/${this.state.recipe.id}`, {
+        fetch(`https://chef-r.herokuapp.com/api/recipe/delete/${this.state.recipe.id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -64,7 +64,7 @@ export default class Editrecipe extends Component {
         
         
        
-        fetch(`/api/comment/delete/${commentid}`, {
+        fetch(`https://chef-r.herokuapp.com/api/comment/delete/${commentid}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -85,7 +85,7 @@ export default class Editrecipe extends Component {
    getCommentsOnMount(){
     
     let recipeId = this.props.match.params.id;
-    fetch(`/api/commentsget/${recipeId}`)
+    fetch(`https://chef-r.herokuapp.com/api/commentsget/${recipeId}`)
   .then(res => res.json())
   .then(data => {
       console.log(data)
@@ -110,7 +110,7 @@ export default class Editrecipe extends Component {
     like= () => {
         
         //    console.log(this.state.recipe.id)
-        fetch(`/api/like/${this.state.recipe.id}`, {
+        fetch(`https://chef-r.herokuapp.com/api/like/${this.state.recipe.id}`, {
             method: "PUT",
              headers: {
           
@@ -148,7 +148,7 @@ export default class Editrecipe extends Component {
         e.target.reset();
         
         console.log(this.state.recipe.id)
-        fetch(`/api/comments/${this.state.recipe.id}`,{
+        fetch(`https://chef-r.herokuapp.com/api/comments/${this.state.recipe.id}`,{
             method: "POST",
             headers: {
                 
@@ -190,7 +190,7 @@ export default class Editrecipe extends Component {
 
       AddToFavourites=(id)=>{
 
-        fetch(`/api/addfavourites/${id}`,{
+        fetch(`https://chef-r.herokuapp.com/api/addfavourites/${id}`,{
             method: "POST",
             headers: {
                 

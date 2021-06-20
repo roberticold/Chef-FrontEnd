@@ -17,7 +17,7 @@ export default class Contacts extends Component {
     componentDidMount(){
         
         
-        fetch('/api/getcontacts',{
+        fetch('https://chef-r.herokuapp.com/api/getcontacts',{
             method: "POST",
             headers: {
                 
@@ -59,7 +59,7 @@ export default class Contacts extends Component {
     deleteContact= (id) => {
         
        
-        fetch(`/api/contact/delete/${id}/${sessionStorage.getItem('user_name')}`, {
+        fetch(`https://chef-r.herokuapp.com/api/contact/delete/${id}/${sessionStorage.getItem('user_name')}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

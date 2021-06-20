@@ -15,7 +15,7 @@ export default class Userrecipes extends Component {
       componentDidMount(){
         
         
-        fetch('/api/getfavourites',{
+        fetch('https://chef-r.herokuapp.com/api/getfavourites',{
             method: "POST",
             headers: {
                 

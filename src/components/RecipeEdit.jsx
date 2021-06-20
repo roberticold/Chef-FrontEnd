@@ -16,7 +16,7 @@ export default class RecipeEdit extends Component {
     componentDidMount(){
         let recipeId = this.props.match.params.id;
         console.log(recipeId)
-        fetch(`/api/recipe/${recipeId}`)
+        fetch(`https://chef-r.herokuapp.com/api/recipe/${recipeId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -39,7 +39,7 @@ export default class RecipeEdit extends Component {
   let user_id = sessionStorage.getItem('user_id');
   let user_name=sessionStorage.getItem('user_name')
         
-        fetch(`/api/recipe1/${this.state.recipe.id}`, {
+        fetch(`https://chef-r.herokuapp.com/api/recipe1/${this.state.recipe.id}`, {
             method: "PUT",
              headers: {
           

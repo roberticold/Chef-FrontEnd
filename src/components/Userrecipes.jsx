@@ -14,7 +14,7 @@ export default class Userrecipes extends Component {
 
     componentDidMount(){
        
-        fetch(`/api/recipie/${sessionStorage.getItem('user_id')}`)
+        fetch(`https://chef-r.herokuapp.com/api/recipie/${sessionStorage.getItem('user_id')}`)
       .then(res => res.json())
       .then(data => {
           console.log(data)

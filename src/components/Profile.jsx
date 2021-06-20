@@ -17,7 +17,7 @@ export default class Profile extends Component {
     componentDidMount(){
         
         
-        fetch(`/api/getprofile/${sessionStorage.getItem('user_name')}`
+        fetch(`https://chef-r.herokuapp.com/api/getprofile/${sessionStorage.getItem('user_name')}`
 
 
 

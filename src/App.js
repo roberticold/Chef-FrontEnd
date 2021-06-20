@@ -59,7 +59,7 @@ export default class App extends Component {
     let password_confirmed = e.target.comfirm_password.value;
 
     if(password==password_confirmed){
-      fetch('/api/users',{
+      fetch('https://chef-r.herokuapp.com/api/users',{
         method: "POST",
         headers: {
             
@@ -111,7 +111,7 @@ createRecipie = (e)=>{
   let user_name=sessionStorage.getItem('user_name')
   
   
-  fetch('/api/recipie',{
+  fetch('https://chef-r.herokuapp.com/api/recipie',{
       method: "POST",
       headers: {
           
@@ -251,7 +251,7 @@ uploadImageProfile=(files)=>{
   
       
       })
-      fetch('/api/profile_photo_change', {
+      fetch('https://chef-r.herokuapp.com/api/profile_photo_change', {
         method: "PUT",
         headers: {
               
@@ -308,7 +308,7 @@ updateUser = (e)=>{
   let password_confirmed = e.target.comfirm_password.value;
 
   if(password==password_confirmed){
-    fetch('api/profile_info',{
+    fetch('https://chef-r.herokuapp.com/api/profile_info',{
       method: "PUT",
       headers: {
           
@@ -357,7 +357,7 @@ updateUser = (e)=>{
 deleteAccount= () => {
         
        
-  fetch(`/api/account/delete/${sessionStorage.getItem('user_name')}`, {
+  fetch(`https://chef-r.herokuapp.com/api/account/delete/${sessionStorage.getItem('user_name')}`, {
       method: 'DELETE'
   })
   .then(res => res.json())

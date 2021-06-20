@@ -13,7 +13,7 @@ export default class Allrecipes extends Component {
 
     componentDidMount(){
        
-        fetch('/api/allrecipes')
+        fetch('https://chef-r.herokuapp.com/api/allrecipes')
       .then(res => res.json())
       .then(data => {
           console.log(data)
