@@ -37,12 +37,7 @@
     border-radius: 2%;
   }
   
-  .card-body {
-    display: inline-block;
-    border-radius: 2%;
-    
-    width: 310px;
-  }
+
   
   .card-number {
     margin-top: 15px;
