@@ -39,7 +39,7 @@
   
   .card-body {
     display: inline-block;
-    border-radius: 20%;
+    border-radius: 2%;
     
     width: 310px;
   }
@@ -142,17 +142,7 @@
 
 
 }
-#left-panel{
-position:fixed;
-height:100vh;
-width:20vw;
-z-index:1;
-top:5em;
-overflow-x:hidden;
-padding-top: 10px;
 
-
-}
 
 #activa{
  align-content: center;

@@ -386,9 +386,10 @@ deleteAccount= () => {
       
       
       <React.Fragment>
+        <Navbar isSignedIn={this.state.isSignedIn} profile_photo1={this.state.profile_photo} onLogOut={this.LogOut} /> 
         <Router>
 
-          <Navbar isSignedIn={this.state.isSignedIn} profile_photo1={this.state.profile_photo} onLogOut={this.LogOut} /> 
+          
           
           <ToastContainer/>
          
