@@ -389,6 +389,7 @@ deleteAccount= () => {
         <Router>
 
           <Navbar isSignedIn={this.state.isSignedIn} profile_photo1={this.state.profile_photo} onLogOut={this.LogOut} /> 
+          <LeftPanel/>
           
           <ToastContainer/>
          
