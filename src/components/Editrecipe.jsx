@@ -314,8 +314,8 @@ export default class Editrecipe extends Component {
                         <h5>{comment.user_name}</h5>
                          <div className="col"></div><><h6 >{comment.date_created}</h6></> 
                          <p>{comment.message}</p>
-                         {comment.user_name == this.props.username ? (<button className="btn btn-danger" key={comment.id} onClick={() => this.deleteComment(comment.id)} data-bs-dismiss="modal"><i class="fas fa-trash-alt"></i></button> ):(<></>)}
-                         <hr class="style10"></hr>
+                         {comment.user_name == this.props.username ? (<button className="btn btn-danger" key={comment.id} onClick={() => this.deleteComment(comment.id)} data-bs-dismiss="modal"><i className="fas fa-trash-alt"></i></button> ):(<></>)}
+                         <hr className="style10"></hr>
 
                       
                         </div>
@@ -336,9 +336,9 @@ export default class Editrecipe extends Component {
                                 {/* <input type="text" placeholder="Add message" name="username" id="comment" className="input-text"></input>
                                 <input type="submit" name="Sign In" className="btn btn-outline-secondary input-text form-control" value="comment"></input> */}
 
-                                <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Add a comment" id="comment"  aria-label="Recipient's username" aria-describedby="button-addon2"></input>
-                                <button  type="submit" class="btn btn-outline-secondary input-text " id="button-addon2">Button</button>
+                                <div className="input-group mb-3">
+                                <input type="text" className="form-control" placeholder="Add a comment" id="comment"  aria-label="Recipient's username" aria-describedby="button-addon2"></input>
+                                <button  type="submit" className="btn btn-outline-secondary input-text " id="button-addon2">Button</button>
                                 </div>           
                                 
                             </form>    
