@@ -27,7 +27,7 @@
       "react-app",
       "react-app/jest"
     ]
-  },"proxy": "https://chef-r.herokuapp.com",
+  },
   
   "browserslist": {
     "production": [
