@@ -58,19 +58,19 @@ export default class Profile extends Component {
         }
         
         return (
-            <div className="container-fluid ">
-                <div className="row justify-content-center mt-3">
-                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div>
+                <div className="row justify-content-center m-3">
+                 <div className="col-xxl-6 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <img style={{height:'50px', width:'50px'}} src={sessionStorage.getItem('profile_photo')} id="image-user" alt=""/>
+                </div>  
                 </div>
-                </div>
-                <div className="row justify-content-center mt-3">
-                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div className="row justify-content-center m-3">
+                 <div className="col-xxl-6 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <input type="file" onChange={(e)=>{this.props.uploadImageProfile(e.target.files)}}/>
-                </div>
-                </div>
-                <div className="row justify-content-center mt-3">
-                <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                </div>  
+                </div>  
+                
+                
                 <div className="page-content">
                     <div className="form-v7-content">
                         
@@ -103,8 +103,8 @@ export default class Profile extends Component {
                     
 
                         </div>
-                </div>
-                <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                
+                
                 <div className="page-content">
                     <div className="form-v7-content">
                         
@@ -115,9 +115,9 @@ export default class Profile extends Component {
                     
 
                         </div>
-                </div>
+               
                 
-                </div>
+                
                 
                 
                     
@@ -125,8 +125,8 @@ export default class Profile extends Component {
                     
                     
 
-                      
-            </div>
+                </div>         
+                
         )
     }
 }

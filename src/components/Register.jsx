@@ -20,12 +20,7 @@ export default class Register extends Component {
         return (
             <div>
 
-                <div className="row position-relative">
-                    <div className="col position-absolute top-50 start-50">
-                    
-                        
-                    </div>
-                </div>
+                
                     
                     <div className="page-content">
                     <div className="form-v7-content">
