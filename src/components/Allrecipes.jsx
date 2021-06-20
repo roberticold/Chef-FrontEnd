@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Userrecipes.css';
+
 
 export default class Allrecipes extends Component {
     constructor(){

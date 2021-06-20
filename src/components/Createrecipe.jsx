@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import './Recipe.css';
-import './Register.css';
+
 
 
 export default class Createrecipe extends Component {

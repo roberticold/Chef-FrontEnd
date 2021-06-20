@@ -396,9 +396,9 @@ deleteAccount= () => {
 
           <div className="container-fluid ">
                 <div className="row justify-content-center">
-                {/* <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
                 {this.state.isSignedIn ? ( <LeftPanel/> ) :('')}
-                </div> */}
+                </div>
                    
                     <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     
@@ -443,7 +443,11 @@ deleteAccount= () => {
                     </Switch>
                      
                     </div>
-                   
+                    <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                      
+                      
+
+                    </div>
                     
                     
 

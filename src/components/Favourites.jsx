@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Userrecipes.css';
+
 import { Link } from 'react-router-dom';
 
 export default class Userrecipes extends Component {
