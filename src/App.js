@@ -386,17 +386,16 @@ deleteAccount= () => {
       
       
       <React.Fragment>
-        <Navbar isSignedIn={this.state.isSignedIn} profile_photo1={this.state.profile_photo} onLogOut={this.LogOut} /> 
         <Router>
 
-          
+          <Navbar isSignedIn={this.state.isSignedIn} profile_photo1={this.state.profile_photo} onLogOut={this.LogOut} /> 
           
           <ToastContainer/>
          
 
 
           <div className="container-fluid ">
-                <div className="row justify-content-center">
+                <div className="row ">
                 
                     <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     

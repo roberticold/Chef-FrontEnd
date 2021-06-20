@@ -332,8 +332,7 @@ export default class Editrecipe extends Component {
                                 <label for="comment" className="form-label"></label>
                                
                                 </div>
-                                {/* <input type="text" placeholder="Add message" name="username" id="comment" className="input-text"></input>
-                                <input type="submit" name="Sign In" className="btn btn-outline-secondary input-text form-control" value="comment"></input> */}
+                               
 
                                 <div className="input-group mb-3">
                                 <input type="text" className="form-control" placeholder="Add a comment" id="comment"  aria-label="Recipient's username" aria-describedby="button-addon2"></input>
