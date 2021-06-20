@@ -394,10 +394,9 @@ deleteAccount= () => {
          
 
 
-          <div className="container-fluid ">
-                <div className="row justify-content-center">
+          
+               
                 
-                    <div className="col">
                     
                     <Switch>
                     
@@ -439,13 +438,11 @@ deleteAccount= () => {
                     
                     </Switch>
                      
-                    </div>
+                 
                    
                     
 
-                  </div>
-                </div>
-         
+                
             
         </Router>
       </React.Fragment>     

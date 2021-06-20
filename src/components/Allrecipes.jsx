@@ -38,12 +38,12 @@ export default class Allrecipes extends Component {
             
                 {this.state.product.map((recipe)=>(
                 
-                <div className="container-fluid ">
+              
   
   
 
   <div className="row justify-content-center m-3">
-      <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div className="col-xxl-6 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
         
             <div className="card shadow-sm" id="radius">
               <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
@@ -71,7 +71,7 @@ export default class Allrecipes extends Component {
 
 </div>
 
-</div>
+
 
 
 ))}
