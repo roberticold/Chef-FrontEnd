@@ -298,7 +298,7 @@ export default class Editrecipe extends Component {
                  </div>
       <div className="row justify-content-center m-2">
         <div className="col col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 col-xxs-8">
-                <div className="card shadow-sm ">
+                
                     <h5>Comments</h5>
                    
                 
@@ -343,7 +343,7 @@ export default class Editrecipe extends Component {
                             </form>    
                          
 
-                    </div>
+                    
                     
                 </div>
                            
