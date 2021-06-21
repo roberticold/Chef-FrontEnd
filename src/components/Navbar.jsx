@@ -16,7 +16,7 @@ export default class Navbar extends Component {
 
                
                 
-                <nav className="navbar shadow-sm sticky-top navbar-expand-md navbar-light m-0" style={{"background-color":"white"}}>  
+                <nav className="navbar shadow-sm sticky-top navbar-expand-md navbar-light " style={{"background-color":"white"}}>  
                     
                     
                             <div >
