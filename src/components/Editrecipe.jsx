@@ -11,6 +11,8 @@ export default class Editrecipe extends Component {
             recipe: {},
             comment:[],
             getcomments:[],
+            favourite:"0",
+            likes:"0",
             redirect: null
             
         }
@@ -24,8 +26,12 @@ export default class Editrecipe extends Component {
             .then(data => {
                 
                 this.getCommentsOnMount();
-                console.log(data)
+                this.GetFavouriteStatus();
+                this.GetLikes();
+                console.log(this.state.favourite.favourite_status)
                 
+
+               
                 this.setState({
                     
                     recipe: data,
@@ -35,9 +41,7 @@ export default class Editrecipe extends Component {
 
             }).catch((error) => {
                 console.error(error);
-                this.setState({
-                    
-                })
+                
             })
     }
 
@@ -101,15 +105,100 @@ export default class Editrecipe extends Component {
 
 })
 }
+    
+    GetFavouriteStatus(){
+        
+        let recipeId = this.props.match.params.id;  
+    fetch(`https://chef-r.herokuapp.com/api/getfavourites/${recipeId}`,{
+        method: "POST",
+        headers: {
+            
+            "Content-Type": "application/json", 
+            
+        },
+        body:JSON.stringify( {
+  
+  
+            "username":sessionStorage.getItem("user_name"),
+            
+            
+  
+  
+        })
 
 
+
+    })
+        .then(res => res.json())
+        .then(data => {
+            
+            
+            console.log(data)
+            
+            this.setState({
+                
+                favourite: data,
+                
+
+               
+            })
+
+        }).catch((error) => {
+            console.error(error);
+            
+        })
+}
+
+
+GetLikes(){
+        
+    let recipeId = this.props.match.params.id;  
+    fetch(`https://chef-r.herokuapp.com/api/getLikes/${recipeId}`,{
+        method: "POST",
+        headers: {
+            
+            "Content-Type": "application/json", 
+            
+        },
+        body:JSON.stringify( {
+  
+  
+            "username":sessionStorage.getItem("user_name"),
+            
+            
+  
+  
+        })
+
+
+
+    })
+        .then(res => res.json())
+        .then(data => {
+            
+            
+            
+            
+            this.setState({
+                
+                likes: data,
+                
+
+               
+            })
+
+        }).catch((error) => {
+            console.error(error);
+            
+        })
+}
 
 
     
     like= () => {
         
-        //    console.log(this.state.recipe.id)
-        fetch(`https://chef-r.herokuapp.com/api/like/${this.state.recipe.id}`, {
+        let recipeId = this.props.match.params.id;  
+        fetch(`https://chef-r.herokuapp.com/api/like/${recipeId}`, {
             method: "PUT",
              headers: {
           
@@ -123,13 +212,17 @@ export default class Editrecipe extends Component {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                this.GetLikes();
+                
                 this.setState({
-                    
+                
                     recipe: data,
-
+                    
+    
                    
                 })
+               
+                
             })
         }
 
@@ -210,10 +303,11 @@ export default class Editrecipe extends Component {
       
         }).then(res => res.json())
         .then(data => {
-            console.log(data)
+            
+            this.GetFavouriteStatus();
             
             this.setState({
-                recipe: data
+                favourite: data
                 
                 
       
@@ -269,10 +363,10 @@ export default class Editrecipe extends Component {
                     <img src="/images/screenshot_1.jpg" alt=""/><span className="card-number "> # {this.state.recipe.id}</span>
                     <span className="card-author subtle">{this.state.recipe.username}</span>
                     <h6>{this.state.recipe.likes} LIKES</h6>
-                    {this.state.recipe.favourite_status == 0 ? 
-                    (<a className="btn btn-outline" key={this.state.recipe.id} onClick={() => this.AddToFavourites(this.state.recipe.id)} data-bs-dismiss="modal"><i class="far fa-star" style={{'font-size':'27px','color':'blue'}}></i></a>)
-                    :
+                    {this.state.favourite == "1" ? 
                     (<a className="btn btn-outline" key={this.state.recipe.id} onClick={() => this.AddToFavourites(this.state.recipe.id)} data-bs-dismiss="modal"><i class="fas far fa-star" style={{'font-size':'27px','color':'blue'}}></i></a>)
+                    :
+                    (<a className="btn btn-outline" key={this.state.recipe.id} onClick={() => this.AddToFavourites(this.state.recipe.id)} data-bs-dismiss="modal"><i class="far fa-star" style={{'font-size':'27px','color':'blue'}}></i></a>)
                     }
                     
                     
@@ -285,9 +379,9 @@ export default class Editrecipe extends Component {
 
                       (<><a href={`/edit1/${this.state.recipe.id}`} className="btn btn-primary">Edit</a> <button className="btn btn-danger" onClick={this.deleteRecipe} data-bs-target="#deleteModal">Delete</button></> )
                       :
-                      ( this.state.recipe.likes_status == 0 ?  (<><a onClick={this.like} className="btn btn-outline " style={{'radius':'50%'}}><i class="fas fa-thumbs-up" style={{'font-size':'27px','color':'grey'}} ></i></a><h6>{this.state.recipe.likes} Likes</h6></>)
+                      ( this.state.likes == "1" ?  (<><a onClick={this.like} className="btn btn-outline " style={{'radius':'50%'}}><i class="fas fa-thumbs-up" style={{'font-size':'27px','color':'blue'}} ></i></a><h6>{this.state.recipe.likes} Likes</h6></>)
                        :
-                        (<><a onClick={this.like} className="btn btn-outline " style={{'radius':'50%'}}><i class="fas fa-thumbs-up" style={{'font-size':'27px','color':'blue'}} ></i></a><h6>{this.state.recipe.likes} Likes</h6></>) 
+                        (<><a onClick={this.like} className="btn btn-outline " style={{'radius':'50%'}}><i class="fas fa-thumbs-up" style={{'font-size':'27px','color':'grey'}} ></i></a><h6>{this.state.recipe.likes} Likes</h6></>) 
                        
                       )}
                       
@@ -360,8 +454,6 @@ export default class Editrecipe extends Component {
         
     }
 }
-
-
 
 
 
