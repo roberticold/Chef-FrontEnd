@@ -61,7 +61,13 @@ export default class Navbar extends Component {
                                    <a className="nav-link active" href="/userrecipes">My Recipes</a>
                                </li>
                                <li className="nav-item">
-                                   <a className="nav-link active" href="#">Most Popular Recipes</a>
+                                   <a className="nav-link active" href="/contacts">Contacts</a>
+                               </li>
+                               <li className="nav-item">
+                                   <a className="nav-link active" href="/favourites">Favourites</a>
+                               </li>
+                               <li className="nav-item">
+                                   <a className="nav-link active" href="/allchefs">All Chefs</a>
                                </li>
                                
                           </ul>
