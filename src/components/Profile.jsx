@@ -75,6 +75,10 @@ export default class Profile extends Component {
                     <div className="form-v7-content">
                         
                         <form onSubmit ={(e)=>this.props.onUpdateUser(e)}  className="form-detail" action="#" method="post" id="myform">
+                            {/* <div className="form-row">
+                                <label for="username">NEW USERNAME</label>
+                                <input defaultValue={this.state.info.username }type="text" name="username" id="username" className="input-text"></input>
+                            </div> */}
                             <div className="form-row">
                                 <label for="your_email">NEW E-MAIL</label>
                                 <input defaultValue={this.state.info.email } type="text" name="your_email" id="your_email" className="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"></input>
