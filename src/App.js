@@ -302,7 +302,6 @@ uploadImageRecipe=(files)=>{
 updateUser = (e)=>{
   e.preventDefault();
   let old_user=sessionStorage.getItem("user_name")
-  let username = e.target.username.value;
   let email = e.target.your_email.value;
   let password = e.target.password.value;
   let password_confirmed = e.target.comfirm_password.value;
@@ -318,7 +317,6 @@ updateUser = (e)=>{
       body:JSON.stringify( {
 
           "old_user":old_user,
-          "username":username,
           "email":email,
           "password":password
 
