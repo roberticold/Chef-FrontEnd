@@ -31,8 +31,11 @@ export default class Allrecipes extends Component {
     })
 }
     render() {
+      if (!this.props.isSignedIn){
+        return <Redirect to='/' />
+    
         
-        return (
+      }return (
            
             <div>
             

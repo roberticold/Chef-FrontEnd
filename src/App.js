@@ -13,7 +13,7 @@ import RecipeEdit from './components/RecipeEdit'
 import 'bootstrap/dist/css/bootstrap.css';
 import { StickyContainer, Sticky } from 'react-sticky';
 import {BrowserRouter as Router} from 'react-router-dom';
-import LeftPanel from './components/LeftPanel';
+// import LeftPanel from './components/LeftPanel';
 import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Profile from './components/Profile';
@@ -385,6 +385,14 @@ deleteAccount= () => {
       
       <React.Fragment>
          <Navbar isSignedIn={this.state.isSignedIn} profile_photo1={this.state.profile_photo} onLogOut={this.LogOut} /> 
+         
+         {this.state.isSignedIn ? ( <LeftPanel/>
+
+
+
+):
+(""
+)}
         <Router>
 
          
@@ -415,13 +423,13 @@ deleteAccount= () => {
                       <Userrecipes />
                       </Route>
                       <Route exact path='/allrecipes' >
-                      <Allrecipes username={this.state.username}/>
+                      <Allrecipes isSignedIn={this.state.isSignedIn} username={this.state.username}/>
                       </Route>
                       <Route exact path='/allchefs' >
-                      <AllChefs />
+                      <AllChefs isSignedIn={this.state.isSignedIn}/>
                       </Route>
                       <Route exact path='/contacts' >
-                      <Contacts />
+                      <Contacts isSignedIn={this.state.isSignedIn}/>
                       </Route>
                       <Route exact path='/favourites' >
                       <Favourites />

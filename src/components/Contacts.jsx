@@ -76,7 +76,10 @@ export default class Contacts extends Component {
 
 
     render() {
-        return (
+        if (!this.props.isSignedIn){
+            return <Redirect to='/' />
+        
+        }return (
 
           
             <div className="row justify-content-center m-2">

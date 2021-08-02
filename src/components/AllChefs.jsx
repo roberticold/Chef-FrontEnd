@@ -84,7 +84,9 @@ export default class AllChefs extends Component {
     
 
     render() {
-        return (
+        if (!this.props.isSignedIn){
+            return <Redirect to='/' />
+        }return (
 
           
             <div className="row justify-content-center m-3">
