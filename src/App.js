@@ -432,7 +432,7 @@ deleteAccount= () => {
                       <Contacts isSignedIn={this.state.isSignedIn}/>
                       </Route>
                       <Route exact path='/favourites' >
-                      <Favourites />
+                      <Favourites isSignedIn={this.state.isSignedIn} />
                       </Route>
                       <Route exact path='/profile' >
                       <Profile onDeleteAccount={this.deleteAccount} onUpdateUser={this.updateUser} uploadImageProfile={this.uploadImageProfile} redirect={this.state.redirect}/>

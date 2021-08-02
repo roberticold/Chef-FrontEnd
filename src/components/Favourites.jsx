@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import { Link } from 'react-router-dom';
 
@@ -56,7 +57,10 @@ export default class Userrecipes extends Component {
 
 
     render() {
-        return (
+        if (!this.props.isSignedIn){
+            return <Redirect to='/' />
+        
+        }return (
         <div>
                 {this.state.recipesfav.map((recipe)=>(
                 
