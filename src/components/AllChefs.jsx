@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StickyContainer, Sticky } from 'react-sticky';
 import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
 
 
 export default class AllChefs extends Component {
